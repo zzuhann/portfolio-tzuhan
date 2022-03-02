@@ -1,0 +1,247 @@
+@charset "UTF-8";
+* {
+  font-family: "Oswald", "Noto Sans TC", "微軟正黑體";
+  position: relative;
+}
+
+html, body {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  margin-top: -60px;
+  background-image: url(https://i.imgur.com/WAD75Y1.png);
+  background-size: cover;
+  background-position: 0 bottom;
+  width: 100%;
+  text-align: center;
+  padding: 180px 0px;
+}
+header .icon {
+  width: 80%;
+  max-width: 650px;
+}
+header .explore {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 90%;
+  color: #333;
+  opacity: 0;
+  transition: 0.5s;
+  animation: upin 2s infinite;
+}
+header .explore::after {
+  content: "v";
+  display: block;
+  transform: scaleX(1.3) scaleY(0.5);
+}
+header .explore.at_top {
+  opacity: 1;
+}
+@keyframes upin {
+  0% {
+    bottom: -10px;
+  }
+  50% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -10px;
+  }
+}
+
+nav.navbar {
+  z-index: 9;
+  transition: 0.5s;
+}
+nav.navbar a.navbar-brand {
+  width: 15%;
+  min-width: 100px;
+  color: #555;
+}
+
+nav.navbar.at_top {
+  background-color: transparent;
+}
+
+section#section_about {
+  background-color: #e5e3c9;
+}
+section#section_about img.line {
+  position: absolute;
+  width: 50%;
+}
+section#section_about .line_01 {
+  left: 40%;
+  top: 10%;
+}
+section#section_about .line_02 {
+  left: 15%;
+  bottom: 10%;
+}
+section#section_about .col-sm-8 {
+  padding: 70px;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+section#section_about .col-sm-8 h5 {
+  font-weight: bold;
+  font-size: 25px;
+}
+section#section_about .col-sm-8 h5 span {
+  font-weight: normal;
+}
+section#section_about .col-sm-4 {
+  height: 400px;
+  background-image: url(https://i.imgur.com/pLUQ4hQ.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px;
+  background-origin: content-box;
+}
+section#section_about img.tri_line {
+  width: 100%;
+  bottom: -20px;
+  z-index: 8;
+}
+
+section#section_skills {
+  padding: 60px;
+  background-color: #ECECEC;
+}
+section#section_skills h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #5B7D7F;
+  letter-spacing: 2px;
+}
+section#section_skills .col-sm-4 {
+  text-align: center;
+}
+section#section_skills img.icon_sevice {
+  width: 60%;
+}
+
+h1.title {
+  font-size: 25px;
+  margin-bottom: 30px;
+  background-color: #5B7D7F;
+  display: inline-block;
+  color: #fff;
+  padding: 5px 15px;
+}
+
+section#section_works {
+  background-color: #ECECEC;
+  color: #333;
+}
+section#section_works h1 {
+  margin-bottom: 10px;
+}
+section#section_works a {
+  text-decoration: none;
+  color: #333;
+}
+section#section_works .work {
+  height: 250px;
+  padding: 5px;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+section#section_works .work::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+  opacity: 0;
+  transition: 0.3s;
+}
+section#section_works .work .texts {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 6;
+  letter-spacing: 1px;
+  width: calc(100% - 100px);
+  opacity: 0;
+  transition: 0.3s;
+}
+section#section_works .work img.show {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section#section_works .work:hover::before, section#section_works .work:hover .texts {
+  opacity: 1;
+}
+section#section_works img.tri_line {
+  width: 90%;
+  right: 0px;
+  bottom: calc(100% - 2px);
+  position: absolute;
+}
+
+section#section_contact {
+  background-color: #e5e3c9;
+  overflow: hidden;
+  color: #333;
+  padding: 60px;
+}
+section#section_contact .mails {
+  max-width: 500px;
+  margin-left: 50px;
+}
+section#section_contact .enve {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+}
+section#section_contact .paper {
+  background-color: #ECECEC;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+section#section_contact .paper h1 {
+  font-size: 20px;
+}
+section#section_contact .paper a {
+  text-decoration: none;
+  color: #5B7D7F;
+}
+section#section_contact .pic {
+  background-image: url(https://i.imgur.com/IiXu0wv.jpg);
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding: 10px;
+  background-origin: content-box;
+  text-align: center;
+  height: 400px;
+}
+
+footer#footer img.icon {
+  width: 100%;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Tzuhan 林子涵 | 作品集網站</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;family=Oswald:wght@200;300;400;500;600;700&amp;display=swap'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar navbar-expand-md navbar-light fixed-top at_top">
+  <div class="container-fluid"><a class="navbar-brand" href="#">TZU HAN LIN</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto"><a class="nav-link" href="#header_index">Home</a><a class="nav-link" href="#section_about">About</a><a class="nav-link" href="#section_skills">Skills</a><a class="nav-link" href="#section_works">Works</a><a class="nav-link" href="#section_contact">Contact</a></div>
+    </div>
+  </div>
+</nav>
+<header id="header_index">
+  <div class="container"><img class="icon" src="https://i.imgur.com/TBuxrYU.png" alt=""/></div>
+  <div class="explore at_top">EXPLORE</div>
+</header>
+<section id="section_about">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8"><img class="line line_01" src="https://i.imgur.com/d31cIBb.png" alt=""/><img class="line line_02" src="https://i.imgur.com/d31cIBb.png" alt=""/>
+        <h5>林子涵 <span>Tzu Han Lin</span></h5>
+        <p><br>政治大學財政學系四年級，大學時期參與各式新創相關社團、活動，享受邏輯思辨的過程、以及嘗試各種不同的可能。<br></p>「不曾想過這世界的各種可能，是因為從來沒有看過。」<br>
+        越朝這偌大的世界多走一步，就能看到更多未曾想過的視野和風景。<br><br>
+        期待能將自己過往大學所學的商學領域知識，結合前端工程技能，走到更遠的地方。
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+  </div><img class="tri_line" src="https://i.imgur.com/aU8ZEAj.png" alt=""/>
+</section>
+<!-- Skills-->
+<section id="section_skills">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="title">Skills</h1>
+      </div>
+      <div class="col-sm-4"><img class="icon_sevice" src="https://i.imgur.com/h0MaR8U.png" alt=""/>
+        <h3>前端開發</h3>
+      </div>
+      <div class="col-sm-4"><img class="icon_sevice" src="https://i.imgur.com/lFKscZJ.png" alt=""/>
+        <h3>平面設計</h3>
+      </div>
+      <div class="col-sm-4"><img class="icon_sevice" src="https://i.imgur.com/SPSKMCI.png" alt=""/>
+        <h3>內容行銷</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Works-->
+<section id="section_works">
+  <div class="container" id="app">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="title">Works - 前端開發</h1>
+      </div>
+    </div>
+    <div class="row" v-if="works.length&gt;0"><a class="col-sm-3 work" v-for="w in works.slice(0,7)" v-bind:href="w.link" target="_blank"><img class="show" :src="w.img"/>
+        <div class="texts">
+          <h5 class="title">{{w.title}}</h5>
+          <p class="content">{{w.description}}</p>
+        </div></a></div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="title">Works - 平面設計</h1>
+      </div>
+    </div>
+    <div class="row" v-if="works.length&gt;0"><a class="col-sm-3 work" data-fancybox="gallery" v-for="w in works.slice(7,16)" v-bind:href="w.img"><img class="show" :src="w.img"/>
+        <div class="texts">
+          <h5 class="title">{{w.title}}</h5>
+        </div></a></div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="title">Works - 內容行銷</h1>
+      </div>
+    </div>
+    <div class="row"><a class="col-sm-3 work" v-for="w in works.slice(16,24)" v-bind:href="w.link" target="_blank"><img class="show" :src="w.img"/>
+        <div class="texts">
+          <h5 class="title">{{w.title}}</h5>
+        </div></a></div>
+  </div>
+</section>
+<!-- Contact-->
+<section id="section_contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="mails">
+          <div class="enve"><img class="enve" src="https://i.imgur.com/0qJKNDo.png" alt=""/></div>
+          <div class="paper">
+            <h1>Contact/More information</h1>
+            <p>若您想聯絡我，可透過 Email、LinkedIn<br></p><a href="mailto:zzuhanlin@gmail.com">Email: zzuhanlin@gmail.com<br></a><a href="https://www.linkedin.com/in/zzuhanlin/" target="_blank"> LinkedIn: 林子涵</a>
+            <p><br>若您想了解更多資訊，可透過以下</p><a href="https://drive.google.com/file/d/1OuH8fIOzWCjQeWolL4qRWcLTW27qjhNl/view" target="_blank">作品集 PDF（專欄文章、社群行銷、影片剪輯）</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 pic"></div>
+    </div>
+  </div>
+</section>
+<!-- footer-->
+<footer id="footer"><img class="icon" src="https://i.imgur.com/RjGku1c.png" alt=""/></footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
